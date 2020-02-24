@@ -132,3 +132,14 @@ dmypy.json
 .idea
 .DS_Store
 */.DS_Store
+
+*[Da]ata/*
+dataset/*
+/data
+
+data/*
+*.label
+*.eml
+*.csv
+Icon
+
