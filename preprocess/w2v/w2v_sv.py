@@ -2,13 +2,16 @@
 from gensim import models
 import jieba
 import numpy as np
+from utils.config import Config
 
-class W2VS():
+class w2sv():
+
     def __init__(self):
-        jieba.set_dictionary('../../data/dict/dict.txt.big')
-        jieba.load_userdict('../../data/dict/my_dict')
+        config = Config()
+        jieba.set_dictionary(config.dict_big_text)
+        jieba.load_userdict(config.dict_my_dict)
         jieba.initialize()
-        self.model = models.Word2Vec.load('../../model/w2v/word2vec.model')
+        self.model = models.Word2Vec.load(config.word2vec_model)
 
     def getSentenceVectors(self, sentence):
         senCut = list(jieba.cut(sentence))
@@ -28,6 +31,6 @@ class W2VS():
 
 
 if __name__ == "__main__":
-    w2vs = W2VS()
+    w2vs = w2sv()
     # fanti
     print(w2vs.getSentenceVectors("今天天氣很好"))

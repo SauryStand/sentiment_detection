@@ -1,12 +1,12 @@
 # -*- coding:utf-8 -*-
 
 
-from preprocess.word2vec_sentence_vec import word2sv
+from preprocess.w2v.w2v_sv import w2sv
 import pickle
 import csv
 
 if __name__ == "__main__":
-    w2vs = word2sv()
+    w2vs = w2sv()
     sentencesDict = {}
     with open('dataset/waimai_10k_tw.csv', newline='', encoding='UTF-8') as f:
         rows = csv.reader(f)

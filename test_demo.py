@@ -2,16 +2,19 @@
 
 import torch
 import numpy as np
-from preprocess.w2v import w2v_sv
+from preprocess.w2v.w2v_sv import w2sv
+from utils.config import Config
+
+config = Config()
 
 print("init...")
-w2vs = w2v_sv()
-net = torch.load('preprocess/torch/pytorch_bce.model')
+w2vs = w2sv()
+net = torch.load(config.torch_bce_model)
 net.eval()
 # test_data
 while True:
     ts = input("Input:")
-    v1 = w2vs.getSenVec(ts)
+    v1 = w2vs.getSentenceVectors(ts)
     res = net(torch.FloatTensor(v1), apply_sigmoid = True)
     out = res
     res = res.clone().detach().numpy()[0]
