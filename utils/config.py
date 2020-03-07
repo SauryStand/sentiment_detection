@@ -12,8 +12,8 @@ class Config():
         self.word2vec_model = 'model/w2v/word2vec.model'
         self.dict_big_txt = 'D:\source_codes\python\Sentiment\sentiment_detection\data\dict\\tw\dict.txt.big'
         self.dict_my_dict = 'D:\source_codes\python\Sentiment\sentiment_detection\data\dict\\tw\my_dict'
-
-        self.zh_dict_my_dict_path = 'D:\source_codes\python\Sentiment\sentiment_detection\data\dict\\zh'
+        self.zh_dict_big_txt = 'D:\source_codes\python\Sentiment\sentiment_detection\data\dict\\zh\dict.txt.big'
+        self.zh_dict_my_dict = 'D:\source_codes\python\Sentiment\sentiment_detection\data\dict\\zh\\categories\\my_dict_zh.txt'
 
 
         #mac
@@ -30,7 +30,7 @@ class Config():
         self.tw_wiki_txt = 'D:\source_codes\python\Sentiment\sentiment_detection\data\\f_wikidata\wiki_zh_tw.txt'
 
 
-        self.zh_seg_txt = ''
-        self.zh_wiki_txt = ''
+        self.zh_seg_txt = 'D:\source_codes\python\Sentiment\sentiment_detection\data\\f_wikidata\\wiki_seg_zh.txt'
+        self.zh_wiki_txt = 'D:\source_codes\python\Sentiment\sentiment_detection\data\\f_wikidata\\wiki_texts_zh.txt'
 
-        self.get_wiki_text_path = 'D:\source_codes\python\Sentiment\sentiment_detection\data\\f_wikidata\\'
+        self.get_wiki_text_path = 'D:\source_codes\python\Sentiment\sentiment_detection\data\\f_wikidata\\zhwiki-latest-pages-articles.xml.bz2'
