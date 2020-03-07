@@ -1,8 +1,3 @@
-# -*- coding:utf-8 -*-
-
-'''
-torch neural network model
-'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -25,4 +20,3 @@ class JWP(nn.Module):
             x = self.out(x)
 
         return x
-

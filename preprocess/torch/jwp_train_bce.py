@@ -5,11 +5,16 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 import pickle
-from model.torch.JWP import JWP
 from utils.config import Config
+from JWP import JWP
 
-with open('../../data/github/waimai_10k_tw.pkl', 'rb') as f:
-    #comment10k = pickle.load(f)
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+config = Config()
+with open(config.waimai_cn_pkl_path, 'rb') as f:
     waimai10k = pickle.load(f)
 
 """
@@ -126,6 +131,6 @@ if __name__ == "__main__":
             "LR:", lr
         )
 
-        torch.save(net, '../../model/torch/pytorch_bce.model')
+        torch.save(net, config.torch_bce_model_zh)
         print("model save")
 
