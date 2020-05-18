@@ -8,10 +8,10 @@ class w2sv():
 
     def __init__(self):
         config = Config()
-        jieba.set_dictionary(config.dict_big_text)
-        jieba.load_userdict(config.dict_my_dict)
+        #jieba.set_dictionary(config.zh_dict_txt_big)
+        #jieba.load_userdict(config.zh_my_dict)
         jieba.initialize()
-        self.model = models.Word2Vec.load(config.word2vec_model)
+        self.model = models.Word2Vec.load(config.word2vec_model_zh)
 
     def getSentenceVectors(self, sentence):
         senCut = list(jieba.cut(sentence))
@@ -33,4 +33,6 @@ class w2sv():
 if __name__ == "__main__":
     w2vs = w2sv()
     # fanti
-    print(w2vs.getSentenceVectors("今天天氣很好"))
+    #print(w2vs.getSentenceVectors("今天天氣很好"))
+    #获取词向量
+    print(w2vs.getSentenceVectors("今天天气很好"))

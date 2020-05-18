@@ -1,7 +1,7 @@
 # sentiment_detection
 
 
-# 建置流程
+# 运行流程
 1. 先處理wiki data，準備製作w2v模型
     - 使用檔案:`w2v_seg.py`
 2. 使用處理好的wiki data訓練w2v模型
